@@ -1,0 +1,81 @@
+// 1. AGREGAR esta línea al inicio del archivo, después de los otros imports:
+import { getActiveUsersCount } from './websocket.js';
+
+// 2. BUSCAR esta línea en el endpoint /api/stats:
+// const activeUserIds = new Set(recentJobs.map(j => j.userId));
+
+// 3. REEMPLAZAR la sección del endpoint /api/stats desde "// Active users" hasta el res.json con esto:
+
+  // Dashboard statistics
+  app.get("/api/stats", async (req, res) => {
+    try {
+      const user = await validateApiKey(req, res);
+      if (!user) return;
+
+      const allPrinters = await storage.listPrinters();
+      const allUsers = await storage.listUsers();
+      const allJobs = await storage.listPrintJobs();
+
+      // Calculate statistics
+      const activePrinters = allPrinters.filter(p => p.status === 'online' || p.status === 'busy').length;
+      const pendingJobs = allJobs.filter(j => j.status === 'pending').length;
+      const failedJobs = allJobs.filter(j => j.status === 'failed').length;
+
+      // Count jobs created today
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const jobsToday = allJobs.filter(j => j.createdAt !== null && j.createdAt >= today).length;
+
+      // NUEVO: Obtener usuarios activos del WebSocket en tiempo real
+      const activeUsersFromWS = getActiveUsersCount();
+
+      console.log(`📊 [STATS] Estadísticas solicitadas por ${user.username}`);
+      console.log(`📊 [STATS] Usuarios activos (WebSocket): ${activeUsersFromWS}`);
+      console.log(`📊 [STATS] Impresoras activas: ${activePrinters}/${allPrinters.length}`);
+      console.log(`📊 [STATS] Trabajos hoy: ${jobsToday}`);
+
+      res.json({
+        activePrinters,
+        jobsToday,
+        pendingJobs,
+        failedJobs,
+        activeUsers: activeUsersFromWS, // CAMBIO: Usar datos de WebSocket
+        totalPrinters: allPrinters.length,
+        totalUsers: allUsers.length,
+        totalJobs: allJobs.length
+      });
+    } catch (error) {
+      console.error("❌ [STATS] Error calculando estadísticas:", error);
+      res.status(500).json({ error: "Error fetching statistics" });
+    }
+  });
+
+// 4. AGREGAR este nuevo endpoint después del endpoint /api/debug/websocket-status:
+
+  // Endpoint específico para debug de usuarios activos
+  app.get("/api/debug/active-users", async (req, res) => {
+    try {
+      const user = await validateApiKey(req, res);
+      if (!user) return;
+
+      const { getActiveUsers } = await import('./websocket.js');
+      const activeUsers = getActiveUsers();
+
+      res.json({
+        success: true,
+        totalActive: activeUsers.length,
+        users: activeUsers.map(u => ({
+          username: u.username,
+          duration: Math.floor((Date.now() - u.joinTime.getTime()) / 1000),
+          lastActivity: u.lastActivity.toISOString()
+        })),
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      console.error("❌ [DEBUG] Error obteniendo usuarios activos:", error);
+      res.status(500).json({
+        success: false,
+        error: error.message
+      });
+    }
+  });

@@ -1,0 +1,26 @@
+ [SOCKET-DEBUG] Usuario actual: 4
+index-BMvt50sr.js:327 💓 Heartbeat ACK recibido: 1750027778520
+index-BMvt50sr.js:327 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+index-BMvt50sr.js:327 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+index-BMvt50sr.js:327 📦 [SOCKET-DEBUG] Argumentos: [{…}]
+index-BMvt50sr.js:327 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-15T22:49:38.508Z
+index-BMvt50sr.js:327 🔌 [SOCKET-DEBUG] Socket ID: OHPQCTh_NUrNUILvAAAH
+index-BMvt50sr.js:327 👤 [SOCKET-DEBUG] Usuario actual: 4
+index-BMvt50sr.js:327 💓 Heartbeat ACK recibido: 1750027778520
+index-BMvt50sr.js:327 ✅ [UPDATE_STATUS] Trabajo 237 actualizado exitosamente: {success: true, job: {…}, message: 'Estado actualizado a processing'}
+index-BMvt50sr.js:327 🚀 Trabajo 237 tiene datos QZ preconfigurados - PROCESAMIENTO DIRECTO
+index-BMvt50sr.js:327 📋 Datos QZ a procesar: {printer: 'EPSON TM-T20II Receipt5', dataCount: 1, config: {…}}
+index-BMvt50sr.js:327 📤 Enviando trabajo 237 a impresora EPSON TM-T20II Receipt5
+index-BMvt50sr.js:327 🔑 Firmando con JSEncrypt y clave privada personalizada
+index-BMvt50sr.js:327 ✅ Firma generada exitosamente
+index-BMvt50sr.js:327 ✅ Trabajo 237 enviado exitosamente a la impresora
+index-BMvt50sr.js:327 📊 [UPDATE_STATUS] Actualizando trabajo 237 a estado: completed
+index-BMvt50sr.js:327 ✅ [UPDATE_STATUS] Trabajo 237 actualizado exitosamente: {success: true, job: {…}, message: 'Estado actualizado a completed'}
+index-BMvt50sr.js:327 🎉 [WEBSOCKET_SUCCESS] Trabajo 237 completado via procesamiento en tiempo real
+index-BMvt50sr.js:327 ✅ Trabajo 237 marcado como completado
+index-BMvt50sr.js:327 🎉 ========== TRABAJO 237 COMPLETADO EXITOSAMENTE ==========
+index-BMvt50sr.js:327 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+index-BMvt50sr.js:327 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+index-BMvt50sr.js:327 📦 [SOCKET-DEBUG] Argumentos: [{…}]
+index-BMvt50sr.js:327 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-15T22:49:42.708Z
+index-BMvt50sr.js:327 🔌 [SOCKET-DEBUG] Socket ID: OHPQCTh_NUrNUILvAAAH

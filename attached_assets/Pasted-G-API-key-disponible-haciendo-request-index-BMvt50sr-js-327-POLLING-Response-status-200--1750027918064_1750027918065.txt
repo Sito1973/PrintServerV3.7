@@ -1,0 +1,76 @@
+G] API key disponible, haciendo request...
+index-BMvt50sr.js:327 📊 [POLLING] Response status: 200
+index-BMvt50sr.js:327 📋 [POLLING] Trabajos obtenidos: [{…}]
+index-BMvt50sr.js:327 🔥 [POLLING] Encontrados 1 trabajos pendientes
+index-BMvt50sr.js:327 🖨️ [POLLING] Evaluando trabajo 236: Viviana Trujillo 
+index-BMvt50sr.js:327 📊 [POLLING] Procesado: false, Procesando: false
+index-BMvt50sr.js:327 🖨️ [POLLING] Procesando trabajo 236: Viviana Trujillo 
+index-BMvt50sr.js:327 🖨️ ========== PROCESANDO TRABAJO INMEDIATO 236 ==========
+index-BMvt50sr.js:327 📄 Documento: Viviana Trujillo 
+index-BMvt50sr.js:327 🖨️ Impresora: EPSON TM-T20II Receipt5
+index-BMvt50sr.js:327 📊 Estado recibido: ready_for_client
+index-BMvt50sr.js:327 🔍 Verificando estado de QZ Tray...
+index-BMvt50sr.js:327 📊 Actualizando trabajo 236 a estado 'processing'...
+index-BMvt50sr.js:327 📊 [UPDATE_STATUS] Actualizando trabajo 236 a estado: processing
+index-BMvt50sr.js:327 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+index-BMvt50sr.js:327 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+index-BMvt50sr.js:327 📦 [SOCKET-DEBUG] Argumentos: [{…}]
+index-BMvt50sr.js:327 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-15T22:45:01.446Z
+index-BMvt50sr.js:327 🔌 [SOCKET-DEBUG] Socket ID: OHPQCTh_NUrNUILvAAAH
+index-BMvt50sr.js:327 👤 [SOCKET-DEBUG] Usuario actual: 4
+index-BMvt50sr.js:327 💓 Heartbeat ACK recibido: 1750027501687
+index-BMvt50sr.js:327 ✅ [UPDATE_STATUS] Trabajo 236 actualizado exitosamente: {success: true, job: {…}, message: 'Estado actualizado a processing'}
+index-BMvt50sr.js:327 🚀 Trabajo 236 tiene datos QZ preconfigurados - PROCESAMIENTO DIRECTO
+index-BMvt50sr.js:327 📋 Datos QZ a procesar: {printer: 'EPSON TM-T20II Receipt5', dataCount: 1, config: {…}}
+index-BMvt50sr.js:327 📤 Enviando trabajo 236 a impresora EPSON TM-T20II Receipt5
+index-BMvt50sr.js:327 🔑 Firmando con JSEncrypt y clave privada personalizada
+index-BMvt50sr.js:327 ✅ Firma generada exitosamente
+index-BMvt50sr.js:327 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+index-BMvt50sr.js:327 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+index-BMvt50sr.js:327 📦 [SOCKET-DEBUG] Argumentos: [{…}]
+index-BMvt50sr.js:327 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-15T22:45:01.691Z
+index-BMvt50sr.js:327 🔌 [SOCKET-DEBUG] Socket ID: OHPQCTh_NUrNUILvAAAH
+index-BMvt50sr.js:327 👤 [SOCKET-DEBUG] Usuario actual: 4
+index-BMvt50sr.js:327 💓 Heartbeat ACK recibido: 1750027501687
+index-BMvt50sr.js:327 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+index-BMvt50sr.js:327 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+index-BMvt50sr.js:327 📦 [SOCKET-DEBUG] Argumentos: [{…}]
+index-BMvt50sr.js:327 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-15T22:45:01.691Z
+index-BMvt50sr.js:327 🔌 [SOCKET-DEBUG] Socket ID: OHPQCTh_NUrNUILvAAAH
+index-BMvt50sr.js:327 👤 [SOCKET-DEBUG] Usuario actual: 4
+index-BMvt50sr.js:327 💓 Heartbeat ACK recibido: 1750027501687
+index-BMvt50sr.js:327 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+index-BMvt50sr.js:327 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+index-BMvt50sr.js:327 📦 [SOCKET-DEBUG] Argumentos: [{…}]
+index-BMvt50sr.js:327 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-15T22:45:01.692Z
+index-BMvt50sr.js:327 🔌 [SOCKET-DEBUG] Socket ID: OHPQCTh_NUrNUILvAAAH
+index-BMvt50sr.js:327 👤 [SOCKET-DEBUG] Usuario actual: 4
+index-BMvt50sr.js:327 💓 Heartbeat ACK recibido: 1750027501687
+index-BMvt50sr.js:327 ❌ ========== ERROR PROCESANDO TRABAJO 236 ==========
+processJobImmediately @ index-BMvt50sr.js:327
+await in processJobImmediately
+checkPendingJobs @ index-BMvt50sr.js:327
+await in checkPendingJobs
+(anonymous) @ index-BMvt50sr.js:327Understand this error
+index-BMvt50sr.js:327 💥 Error: Error: PDF file specified could not be found.
+    at _qz.websocket.connection.onmessage (qz-tray.js:343:48)
+processJobImmediately @ index-BMvt50sr.js:327
+await in processJobImmediately
+checkPendingJobs @ index-BMvt50sr.js:327
+await in checkPendingJobs
+(anonymous) @ index-BMvt50sr.js:327Understand this error
+index-BMvt50sr.js:327 📊 [UPDATE_STATUS] Actualizando trabajo 236 a estado: failed
+index-BMvt50sr.js:327 ✅ [UPDATE_STATUS] Trabajo 236 actualizado exitosamente: {success: true, job: {…}, message: 'Estado actualizado a failed'}
+index-BMvt50sr.js:327 ❌ [POLLING] Error: Error: PDF file specified could not be found.
+    at _qz.websocket.connection.onmessage (qz-tray.js:343:48)
+checkPendingJobs @ index-BMvt50sr.js:327
+await in checkPendingJobs
+(anonymous) @ index-BMvt50sr.js:327Understand this error
+index-BMvt50sr.js:327 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+index-BMvt50sr.js:327 🕐 [POLLING] Timestamp: 2025-06-15T22:46:01.000Z
+index-BMvt50sr.js:327 ✅ [POLLING] QZ Tray conectado, continuando...
+index-BMvt50sr.js:327 ✅ [POLLING] API key disponible, haciendo request...
+index-BMvt50sr.js:327 📊 [POLLING] Response status: 200
+index-BMvt50sr.js:327 📋 [POLLING] Trabajos obtenidos: []
+index-BMvt50sr.js:327 📭 [POLLING] No hay trabajos pendientes
+index-BMvt50sr.js:327 🔍 [SOCKET-DEBUG] ========== EVENTO ...

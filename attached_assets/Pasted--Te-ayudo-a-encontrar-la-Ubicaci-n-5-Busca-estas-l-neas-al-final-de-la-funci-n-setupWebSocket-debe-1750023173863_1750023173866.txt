@@ -1,0 +1,97 @@
+¡Te ayudo a encontrar la Ubicación 5!
+Busca estas líneas al final de la función setupWebSocket (deberían estar alrededor de línea 400-410):
+typescript  // Configurar función global con la función robusta
+  (global as any).getUserSocket = getUserSocketRobust;
+
+  console.log(`🔧 [WS] Función getUserSocket configurada con manejo robusto`);
+
+  return {
+    io,
+    emitPrintJob,
+    emitPrintJobToUser,
+    getConnectedClients: () => connectedClients.size,
+    getUserSocket: getUserSocketRobust
+  };
+}
+AGREGAR este código JUSTO ANTES del return {:Modificación 5 - Antes del return en setupWebSocketCódigo   // Broadcast inicial de estadísticas cuando se inicializa
+  setTimeout(() => {
+    broadcastUserStats();
+  }, 1000);
+
+  // Monitoreo periódico y limpieza de usuarios inactivos cada 60 segundos
+  setInterval(() => {
+    const now = new Date();
+    lLocalizó y explicó dónde agregar código específico0sHe creado el código que necesita agregar antes del return. Ahora voy a explicarle exactamente dónde colocarlo.Aquí está el antes y después:
+ANTES (lo que tienes ahora):
+typescript  // Configurar función global con la función robusta
+  (global as any).getUserSocket = getUserSocketRobust;
+
+  console.log(`🔧 [WS] Función getUserSocket configurada con manejo robusto`);
+
+  return {
+    io,
+    emitPrintJob,
+    emitPrintJobToUser,
+    getConnectedClients: () => connectedClients.size,
+    getUserSocket: getUserSocketRobust
+  };
+}
+DESPUÉS (como debe quedar):
+typescript  // Configurar función global con la función robusta
+  (global as any).getUserSocket = getUserSocketRobust;
+
+  // NUEVO: Broadcast inicial de estadísticas cuando se inicializa
+  setTimeout(() => {
+    broadcastUserStats();
+  }, 1000);
+
+  // NUEVO: Monitoreo periódico y limpieza de usuarios inactivos cada 60 segundos
+  setInterval(() => {
+    const now = new Date();
+    let removedUsers = 0;
+    
+    // Limpiar usuarios inactivos (más de 2 minutos sin actividad)
+    activeUsers.forEach((userInfo, userId) => {
+      const inactiveTime = now.getTime() - userInfo.lastActivity.getTime();
+      if (inactiveTime > 120000) { // 2 minutos
+        console.log(`🧹 [WS] Removiendo usuario inactivo: ${userInfo.username}`);
+        activeUsers.delete(userId);
+        removedUsers++;
+      }
+    });
+    
+    if (removedUsers > 0) {
+      broadcastUserStats();
+    }
+    
+    // Log estadísticas cada 60 segundos
+    console.log(`👥 [WS] Usuarios activos: ${activeUsers.size}`);
+    if (activeUsers.size > 0) {
+      console.log(`📋 [WS] Lista de usuarios:`);
+      activeUsers.forEach((userInfo) => {
+        const duration = Math.floor((now.getTime() - userInfo.joinTime.getTime()) / 1000);
+        console.log(`   - ${userInfo.username} (${duration}s conectado)`);
+      });
+    }
+  }, 60000);
+
+  console.log(`🔧 [WS] Función getUserSocket configurada con manejo robusto`);
+
+  return {
+    io,
+    emitPrintJob,
+    emitPrintJobToUser,
+    getConnectedClients: () => connectedClients.size,
+    getUserSocket: getUserSocketRobust
+  };
+}
+🎯 Resumen:
+Insertar todo el código del artifact entre la línea:
+
+(global as any).getUserSocket = getUserSocketRobust;
+
+Y antes de la línea:
+
+console.log(\🔧 [WS] Función getUserSocket configurada con manejo robusto`);`
+
+¿Ya encontraste esa ubicación? Una vez que agregues esto, ya tendrás casi completo el websocket.ts. Solo faltaría la modificación 6 (los exports al final del archivo). 🚀

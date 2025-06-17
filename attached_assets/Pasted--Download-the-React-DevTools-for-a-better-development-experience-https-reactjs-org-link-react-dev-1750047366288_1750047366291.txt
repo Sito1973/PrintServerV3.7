@@ -1,0 +1,606 @@
+ Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+ DOM cargado, verificando QZ Tray...
+ ⚠️ QZ Tray library no disponible
+(anonymous) @ print-jobs:113
+ 🚀 ========== INICIALIZANDO PRINTSERVICE (PUNTO ÚNICO) ==========
+ ⚡ Esta es la ÚNICA inicialización activa del sistema
+ 🔑 Usuario autenticado con API key disponible, inicializando PrintService...
+ 🚀 ========== INICIALIZANDO PRINTSERVICE (SISTEMA ÚNICO) ==========
+ ⚡ Este es el ÚNICO sistema de procesamiento automático activo
+ 🚫 Todos los demás sistemas de polling están DESHABILITADOS
+ 🔑 Verificando disponibilidad de API key...
+ ✅ API key encontrada: 7b6fbbe0...
+ 🔗 Conectando con QZ Tray...
+ 🔄 Iniciando conexión con QZ Tray...
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/printers
+ APIRequest: Making request to /api/printers with headers: Object
+ 🔄 [MONITOR] Inicializando QZ Tray...
+ 🚫 [MONITOR] Polling automático DESHABILITADO - Solo modo visualización
+ ⚡ [MONITOR] PrintService maneja todo el procesamiento vía WebSocket
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/print-jobs
+ APIRequest: Making request to /api/print-jobs with headers: Object
+ Intentando inicializar QZ Tray...
+ 🚀 Inicializando QZ Tray (modo WebSocket only)...
+ 🚀 Inicializando QZ Tray (modo WebSocket only)...
+ ✅ QZ Tray script cargado correctamente
+ 🚀 ========== INICIALIZANDO PRINTSERVICE (PUNTO ÚNICO) ==========
+ ⚡ Esta es la ÚNICA inicialización activa del sistema
+ 🚫 [MONITOR] Polling automático DESHABILITADO - Solo modo visualización
+ ⚡ [MONITOR] PrintService maneja todo el procesamiento vía WebSocket
+ Service Worker registrado: ServiceWorkerRegistration
+ 🔐 Configurando seguridad QZ Tray...
+ ✅ Seguridad QZ Tray configurada correctamente
+ 🔐 Configurando seguridad...
+ 🌐 Intentando conectar con configuración: Object
+ Established connection with QZ Tray on ws://localhost:8182
+ 📋 Usando certificado personalizado QZ Tray Demo
+ ✅ Conectado exitosamente a QZ Tray
+ 📋 Versión de QZ Tray: 2.2.5
+ ✅ QZ Tray conectado exitosamente
+ 🔗 Conectando WebSocket con API key disponible...
+ ✅ SERVICIO DE IMPRESIÓN INICIALIZADO CORRECTAMENTE
+ 🚀 ========== INICIANDO SISTEMA DE POLLING AUTOMÁTICO ==========
+ ⚡ Revisando trabajos pendientes cada 10 segundos
+ ✅ [MONITOR] QZ Tray conectado exitosamente
+ 🔍 Buscando impresoras...
+ Inicialización de QZ Tray exitosa
+ ✅ QZ Tray conectado exitosamente
+ 🔍 Buscando impresoras...
+ ✅ QZ Tray conectado exitosamente
+ 🔍 Buscando impresoras...
+ 🔑 Firmando con JSEncrypt y clave privada personalizada
+ ✅ Firma generada exitosamente
+ 🔑 Firmando con JSEncrypt y clave privada personalizada
+ ✅ Firma generada exitosamente
+ 🔑 Firmando con JSEncrypt y clave privada personalizada
+ ✅ Firma generada exitosamente
+ 🚫 [MONITOR] Polling automático DESHABILITADO - Solo modo visualización
+ ⚡ [MONITOR] PrintService maneja todo el procesamiento vía WebSocket
+ 🖨️ Impresoras encontradas: Array(5)
+ 🖨️ [MONITOR] Impresoras locales encontradas: 5
+ 🖨️ Impresoras encontradas: Array(5)
+ 🖨️ 5 impresoras detectadas: Array(5)
+ 📡 Sistema configurado para usar solo WebSocket
+ 🚫 Polling desactivado - Procesamiento en tiempo real vía WebSocket
+ 🖨️ Impresoras encontradas: Array(5)
+ 🖨️ 5 impresoras detectadas: Array(5)
+ 📡 Sistema configurado para usar solo WebSocket
+ 🚫 Polling desactivado - Procesamiento en tiempo real vía WebSocket
+ ✅ ========== WEBSOCKET CONECTADO (PRINTSERVICE) ==========
+ 🆔 Socket ID: kcKU9p9hIfMiGUIVAAAB
+ 🚀 ÚNICO sistema de procesamiento activo
+ 🔐 ========== INICIANDO AUTENTICACIÓN ==========
+ 🔑 API Key: 7b6fbbe0...
+ 🔌 Socket ID: kcKU9p9hIfMiGUIVAAAB
+ 🔗 Socket conectado: true
+ 📡 ✅ Evento de autenticación enviado al servidor
+ 📋 ✅ Esperando confirmación de registro de usuario
+ ⚡ Procesamiento inmediato habilitado
+ WebSocket connection to 'wss://efc932f4-b335-40b5-902a-3e8badbcb5ce-00-2dg6wseh653my.spock.replit.dev:3000/socket.io/?EIO=4&transport=websocket&sid=naWf_hsm6cE34X9rAAAA' failed: 
+createSocket @ socket__io-client.js:1059
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: userStatsUpdate
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:10:16.106Z
+ 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+ 👤 [SOCKET-DEBUG] Usuario actual: null
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: authenticated
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:10:16.308Z
+ 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+ 👤 [SOCKET-DEBUG] Usuario actual: null
+ ✅ ========== USUARIO AUTENTICADO EN WEBSOCKET ==========
+ 👤 Usuario ID: 2
+ 👤 Username: SITO
+ 🔌 Socket ID: kcKU9p9hIfMiGUIVAAAB
+ 🚀 NOTIFICACIONES DIRIGIDAS HABILITADAS
+ 📡 [PRINTSERVICE] Cliente listo para recibir trabajos de impresión
+ 🎯 [PRINTSERVICE] Esperando eventos 'new-print-job'...
+ 🔧 [PRINTSERVICE] Socket conectado: true
+ 🔧 [PRINTSERVICE] Socket en sala: print-jobs, user-2
+ 🎧 [PRINTSERVICE] ========== RE-REGISTRANDO LISTENER new-print-job DESPUÉS DE AUTH ==========
+ 🔌 [PRINTSERVICE] Socket ID actual: kcKU9p9hIfMiGUIVAAAB
+ ✅ [PRINTSERVICE] Listener new-print-job RE-REGISTRADO exitosamente
+ 🎉 ========== PRINTSERVICE TOTALMENTE OPERATIVO ==========
+ 🚀 Listo para recibir y procesar trabajos de impresión automáticamente
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: connection-verified
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:10:17.109Z
+ 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 🧪 ========== VERIFICACIÓN DE CONEXIÓN RECIBIDA ==========
+ 📡 [PRINTSERVICE] Datos: Object
+ ✅ [PRINTSERVICE] WebSocket funcionando correctamente para notificaciones
+ 🎯 [PRINTSERVICE] Sistema listo para recibir trabajos de impresión
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:10:24.854Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:10:34.855Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:10:44.843Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:10:45.245Z
+ 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047046301
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/print-jobs
+ APIRequest: Making request to /api/print-jobs with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:10:54.848Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:11:04.846Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:11:14.842Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:11:15.243Z
+ 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047076300
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/print-jobs
+ APIRequest: Making request to /api/print-jobs with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:11:24.842Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/users
+ APIRequest: Making request to /api/users with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:11:34.843Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/users
+ APIRequest: Making request to /api/users with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:11:45.522Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:11:45.655Z
+ 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047106705
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:11:55.527Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:12:05.514Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:12:15.520Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+PrintService.ts:305 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+PrintService.ts:306 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+PrintService.ts:307 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:12:15.645Z
+PrintService.ts:308 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+PrintService.ts:309 👤 [SOCKET-DEBUG] Usuario actual: 2
+PrintService.ts:290 💓 Heartbeat ACK recibido: 1750047136701
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: Array(1)
+PrintService.ts:581 🔥 [POLLING] Encontrados 1 trabajos pendientes
+PrintService.ts:584 🖨️ [POLLING] Evaluando trabajo 265: SITO
+PrintService.ts:585 📊 [POLLING] Procesado: false, Procesando: false
+PrintService.ts:588 🖨️ [POLLING] Procesando trabajo 265: SITO
+PrintService.ts:329 🖨️ ========== PROCESANDO TRABAJO INMEDIATO 265 ==========
+PrintService.ts:330 📄 Documento: SITO
+PrintService.ts:331 🖨️ Impresora: Microsoft Print to PDF
+PrintService.ts:332 📊 Estado recibido: ready_for_client
+PrintService.ts:339 🔍 Verificando estado de QZ Tray...
+PrintService.ts:345 📊 Actualizando trabajo 265 a estado 'processing'...
+qz-tray.ts:587 📊 [UPDATE_STATUS] Actualizando trabajo 265 a estado: processing
+qz-tray.ts:606 ✅ [UPDATE_STATUS] Trabajo 265 actualizado exitosamente: Object
+PrintService.ts:350 🚀 Trabajo 265 tiene datos QZ preconfigurados - PROCESAMIENTO DIRECTO
+PrintService.ts:354 📋 Datos QZ a procesar: Object
+PrintService.ts:364 📤 Enviando trabajo 265 a impresora Microsoft Print to PDF
+qz-tray.ts:153 🔑 Firmando con JSEncrypt y clave privada personalizada
+qz-tray.ts:157 ✅ Firma generada exitosamente
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:12:25.516Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: Array(0)
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+PrintService.ts:367 ✅ Trabajo 265 enviado exitosamente a la impresora
+qz-tray.ts:587 📊 [UPDATE_STATUS] Actualizando trabajo 265 a estado: completed
+qz-tray.ts:606 ✅ [UPDATE_STATUS] Trabajo 265 actualizado exitosamente: Object
+qz-tray.ts:610 🎉 [WEBSOCKET_SUCCESS] Trabajo 265 completado via procesamiento en tiempo real
+PrintService.ts:369 ✅ Trabajo 265 marcado como completado
+PrintService.ts:375 🎉 ========== TRABAJO 265 COMPLETADO EXITOSAMENTE ==========
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:12:35.525Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: Array(0)
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+PrintService.ts:304 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+PrintService.ts:305 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+PrintService.ts:306 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+PrintService.ts:307 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:12:45.762Z
+PrintService.ts:308 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+PrintService.ts:309 👤 [SOCKET-DEBUG] Usuario actual: 2
+PrintService.ts:290 💓 Heartbeat ACK recibido: 1750047166708
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+PrintService.ts:304 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+PrintService.ts:305 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+PrintService.ts:306 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+PrintService.ts:307 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:13:15.647Z
+PrintService.ts:308 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+PrintService.ts:309 👤 [SOCKET-DEBUG] Usuario actual: 2
+PrintService.ts:290 💓 Heartbeat ACK recibido: 1750047196702
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:13:38.569Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/users
+queryClient.ts:78 APIRequest: Making request to /api/users with headers: Object
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: Array(1)
+PrintService.ts:581 🔥 [POLLING] Encontrados 1 trabajos pendientes
+PrintService.ts:584 🖨️ [POLLING] Evaluando trabajo 266: SITO
+PrintService.ts:585 📊 [POLLING] Procesado: false, Procesando: false
+PrintService.ts:588 🖨️ [POLLING] Procesando trabajo 266: SITO
+PrintService.ts:329 🖨️ ========== PROCESANDO TRABAJO INMEDIATO 266 ==========
+PrintService.ts:330 📄 Documento: SITO
+PrintService.ts:331 🖨️ Impresora: Microsoft Print to PDF
+PrintService.ts:332 📊 Estado recibido: ready_for_client
+PrintService.ts:339 🔍 Verificando estado de QZ Tray...
+PrintService.ts:345 📊 Actualizando trabajo 266 a estado 'processing'...
+qz-tray.ts:587 📊 [UPDATE_STATUS] Actualizando trabajo 266 a estado: processing
+qz-tray.ts:606 ✅ [UPDATE_STATUS] Trabajo 266 actualizado exitosamente: Object
+PrintService.ts:350 🚀 Trabajo 266 tiene datos QZ preconfigurados - PROCESAMIENTO DIRECTO
+PrintService.ts:354 📋 Datos QZ a procesar: Object
+PrintService.ts:364 📤 Enviando trabajo 266 a impresora Microsoft Print to PDF
+qz-tray.ts:153 🔑 Firmando con JSEncrypt y clave privada personalizada
+qz-tray.ts:157 ✅ Firma generada exitosamente
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:13:44.843Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:304 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+PrintService.ts:305 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+PrintService.ts:306 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+PrintService.ts:307 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:13:45.245Z
+PrintService.ts:308 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+PrintService.ts:309 👤 [SOCKET-DEBUG] Usuario actual: 2
+PrintService.ts:290 💓 Heartbeat ACK recibido: 1750047226299
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: Array(0)
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/users
+queryClient.ts:78 APIRequest: Making request to /api/users with headers: Object
+PrintService.ts:367 ✅ Trabajo 266 enviado exitosamente a la impresora
+qz-tray.ts:587 📊 [UPDATE_STATUS] Actualizando trabajo 266 a estado: completed
+qz-tray.ts:606 ✅ [UPDATE_STATUS] Trabajo 266 actualizado exitosamente: Object
+qz-tray.ts:610 🎉 [WEBSOCKET_SUCCESS] Trabajo 266 completado via procesamiento en tiempo real
+PrintService.ts:369 ✅ Trabajo 266 marcado como completado
+PrintService.ts:375 🎉 ========== TRABAJO 266 COMPLETADO EXITOSAMENTE ==========
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:13:55.526Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: Array(0)
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:14:05.515Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: Array(0)
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: Object
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/users
+queryClient.ts:78 APIRequest: Making request to /api/users with headers: Object
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:14:14.843Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:304 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+PrintService.ts:305 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+PrintService.ts:306 📦 [SOCKET-DEBUG] Argumentos: [{…}]
+PrintService.ts:307 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:14:15.257Z
+PrintService.ts:308 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+PrintService.ts:309 👤 [SOCKET-DEBUG] Usuario actual: 2
+PrintService.ts:290 💓 Heartbeat ACK recibido: 1750047256305
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: []
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/users
+queryClient.ts:78 APIRequest: Making request to /api/users with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:14:24.849Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: []
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/users
+queryClient.ts:78 APIRequest: Making request to /api/users with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:14:34.843Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: []
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/users
+queryClient.ts:78 APIRequest: Making request to /api/users with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:14:44.842Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:304 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+PrintService.ts:305 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+PrintService.ts:306 📦 [SOCKET-DEBUG] Argumentos: [{…}]
+PrintService.ts:307 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:14:45.250Z
+PrintService.ts:308 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+PrintService.ts:309 👤 [SOCKET-DEBUG] Usuario actual: 2
+PrintService.ts:290 💓 Heartbeat ACK recibido: 1750047286301
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: []
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/users
+queryClient.ts:78 APIRequest: Making request to /api/users with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:14:54.844Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: []
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/users
+queryClient.ts:78 APIRequest: Making request to /api/users with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:15:04.844Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: []
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:15:15.518Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:304 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+PrintService.ts:305 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+PrintService.ts:306 📦 [SOCKET-DEBUG] Argumentos: [{…}]
+PrintService.ts:307 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:15:15.646Z
+PrintService.ts:308 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+PrintService.ts:309 👤 [SOCKET-DEBUG] Usuario actual: 2
+PrintService.ts:290 💓 Heartbeat ACK recibido: 1750047316699
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: []
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:15:25.529Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: []
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:15:35.517Z
+PrintService.ts:555 ✅ [POLLING] QZ Tray conectado, continuando...
+PrintService.ts:564 ✅ [POLLING] API key disponible, haciendo request...
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+PrintService.ts:570 📊 [POLLING] Response status: 200
+PrintService.ts:578 📋 [POLLING] Trabajos obtenidos: []
+PrintService.ts:595 📭 [POLLING] No hay trabajos pendientes
+queryClient.ts:59 APIRequest: Attempting to get API key, found: Yes
+queryClient.ts:65 APIRequest: Added Authorization header for /api/stats
+queryClient.ts:78 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+PrintService.ts:547 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+PrintService.ts:548 🕐 [POLLING] Timestamp: 2025-06-16T04:15:45.519Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: [{…}]
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:15:45.645Z
+ 🔌 [SOCKET-DEBUG] Socket ID: kcKU9p9hIfMiGUIVAAAB
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047346699
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: []
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/users
+ APIRequest: Making request to /api/users with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}

@@ -1,0 +1,130 @@
+// 1. BUSCAR estas líneas (alrededor de línea 35):
+// let socketServer: Server | null = null;
+// let globalUserSockets: Map<string, string> = new Map();
+
+// 2. AGREGAR estas líneas DESPUÉS de las variables globales existentes:
+
+// Tracking de usuarios activos con información detallada
+let activeUsers = new Map<string, {
+  socketId: string;
+  username: string;
+  userId: string;
+  joinTime: Date;
+  lastActivity: Date;
+}>();
+
+// Función para broadcastear estadísticas de usuarios
+function broadcastUserStats() {
+  if (!socketServer) return;
+  
+  const stats = {
+    totalActive: activeUsers.size,
+    users: Array.from(activeUsers.values()).map(user => ({
+      username: user.username,
+      userId: user.userId,
+      joinTime: user.joinTime.toISOString(),
+      lastActivity: user.lastActivity.toISOString(),
+      duration: Math.floor((Date.now() - user.joinTime.getTime()) / 1000) // segundos conectado
+    })),
+    timestamp: new Date().toISOString()
+  };
+  
+  // Emitir a todos los clientes conectados
+  socketServer.emit('userStatsUpdate', stats);
+  console.log(`📊 [WS] Stats broadcasting: ${stats.totalActive} usuarios activos`);
+}
+
+// 3. BUSCAR esta sección en el evento 'authenticate' (alrededor de línea 120):
+// console.log(`✅ [WS] ========== AUTENTICACIÓN EXITOSA ==========`);
+
+// 4. AGREGAR estas líneas DESPUÉS de esa sección (antes de "Verificación INMEDIATA"):
+
+          // NUEVO: Agregar usuario a tracking activo
+          activeUsers.set(userId, {
+            socketId: socket.id,
+            username: user.username,
+            userId: userId,
+            joinTime: new Date(),
+            lastActivity: new Date()
+          });
+
+          // NUEVO: Broadcastear estadísticas actualizadas
+          broadcastUserStats();
+
+// 5. BUSCAR la sección en el evento 'disconnect' (alrededor de línea 180):
+// console.log(`🧹 [WS] Mapeos limpiados para usuario ${userId}`);
+
+// 6. AGREGAR estas líneas DESPUÉS de esa línea:
+
+        // NUEVO: Remover usuario del tracking activo
+        activeUsers.delete(userId);
+
+        // NUEVO: Broadcastear estadísticas actualizadas
+        broadcastUserStats();
+
+// 7. BUSCAR el evento 'heartbeat' existente y REEMPLAZARLO con esto:
+
+    // Actualizar actividad del usuario en heartbeat
+    socket.on('heartbeat', () => {
+      const userId = connectedClients.get(socket.id);
+      if (userId && activeUsers.has(userId)) {
+        const userInfo = activeUsers.get(userId)!;
+        userInfo.lastActivity = new Date();
+        activeUsers.set(userId, userInfo);
+      }
+      socket.emit('heartbeat-ack', { timestamp: Date.now() });
+    });
+
+// 8. BUSCAR el setInterval del monitoreo de salud (alrededor de línea 240) y AGREGAR después del console.log de usuarios conectados:
+
+    // Actualizar estadísticas cada 30 segundos si hay cambios
+    if (activeUsers.size > 0) {
+      broadcastUserStats();
+    }
+
+// 9. BUSCAR el return al final de setupWebSocket y AGREGAR antes del return:
+
+  // Broadcast inicial de estadísticas cuando se inicializa
+  setTimeout(() => {
+    broadcastUserStats();
+  }, 1000);
+
+  // Monitoreo periódico y limpieza de usuarios inactivos cada 60 segundos
+  setInterval(() => {
+    const now = new Date();
+    let removedUsers = 0;
+    
+    // Limpiar usuarios inactivos (más de 2 minutos sin actividad)
+    activeUsers.forEach((userInfo, userId) => {
+      const inactiveTime = now.getTime() - userInfo.lastActivity.getTime();
+      if (inactiveTime > 120000) { // 2 minutos
+        console.log(`🧹 [WS] Removiendo usuario inactivo: ${userInfo.username}`);
+        activeUsers.delete(userId);
+        removedUsers++;
+      }
+    });
+    
+    if (removedUsers > 0) {
+      broadcastUserStats();
+    }
+    
+    // Log estadísticas cada 60 segundos
+    console.log(`👥 [WS] Usuarios activos: ${activeUsers.size}`);
+    if (activeUsers.size > 0) {
+      console.log(`📋 [WS] Lista de usuarios:`);
+      activeUsers.forEach((userInfo) => {
+        const duration = Math.floor((now.getTime() - userInfo.joinTime.getTime()) / 1000);
+        console.log(`   - ${userInfo.username} (${duration}s conectado)`);
+      });
+    }
+  }, 60000);
+
+// 10. AGREGAR al final del archivo, antes del último export:
+
+export function getActiveUsersCount(): number {
+  return activeUsers.size;
+}
+
+export function getActiveUsers() {
+  return Array.from(activeUsers.values());
+}

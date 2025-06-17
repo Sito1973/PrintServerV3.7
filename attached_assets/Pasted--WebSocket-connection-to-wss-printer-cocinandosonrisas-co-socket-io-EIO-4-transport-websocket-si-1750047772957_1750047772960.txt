@@ -1,0 +1,1034 @@
+ WebSocket connection to 'wss://printer.cocinandosonrisas.co/socket.io/?EIO=4&transport=websocket&sid=2qwfD0Vg_ksioKKbAAAB' failed: 
+createSocket @ index-CR38cudQ.js:327
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:00:11.524Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:00:12.742Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750046413755
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:00:21.518Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:00:31.524Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:00:41.521Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:00:42.748Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750046443757
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:00:51.517Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:01:42.522Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:01:42.968Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750046503981
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:02:42.521Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:02:42.961Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750046563970
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:03:42.514Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:03:42.950Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750046623958
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:04:42.516Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:04:42.967Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750046683973
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:05:42.519Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:05:42.965Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750046743972
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:06:42.517Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:06:42.968Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750046803971
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:07:42.518Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:07:42.973Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750046863975
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:08:42.531Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:08:42.980Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750046923981
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:09:42.520Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:09:42.970Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750046983972
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:10:42.525Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:10:42.967Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047043965
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:11:42.531Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:11:42.992Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047103981
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:12:42.530Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:12:42.976Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047163974
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:13:42.529Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:13:42.982Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047223979
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:14:42.521Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:14:42.963Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047283961
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:15:42.522Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:15:42.968Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047343966
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:16:42.524Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:16:42.977Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047403971
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:17:42.537Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:17:42.975Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047463974
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:18:42.526Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:18:42.973Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047523971
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:19:42.524Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+ 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+ 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+ 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:19:42.979Z
+ 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+ 👤 [SOCKET-DEBUG] Usuario actual: 2
+ 💓 Heartbeat ACK recibido: 1750047583977
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/users
+ APIRequest: Making request to /api/users with headers: Object
+ APIRequest: Attempting to get API key, found: Yes
+ APIRequest: Added Authorization header for /api/stats
+ APIRequest: Making request to /api/stats with headers: Object
+ 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+ 🕐 [POLLING] Timestamp: 2025-06-16T04:19:51.185Z
+ ✅ [POLLING] QZ Tray conectado, continuando...
+ ✅ [POLLING] API key disponible, haciendo request...
+ 📊 [POLLING] Response status: 200
+ 📋 [POLLING] Trabajos obtenidos: Array(0)
+ 📭 [POLLING] No hay trabajos pendientes
+ APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/stats
+index-CR38cudQ.js:335 APIRequest: Making request to /api/stats with headers: Object
+index-CR38cudQ.js:335 APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/stats
+index-CR38cudQ.js:335 APIRequest: Making request to /api/stats with headers: Object
+index-CR38cudQ.js:327 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+index-CR38cudQ.js:327 🕐 [POLLING] Timestamp: 2025-06-16T04:20:01.520Z
+index-CR38cudQ.js:327 ✅ [POLLING] QZ Tray conectado, continuando...
+index-CR38cudQ.js:327 ✅ [POLLING] API key disponible, haciendo request...
+index-CR38cudQ.js:327 📊 [POLLING] Response status: 200
+index-CR38cudQ.js:327 📋 [POLLING] Trabajos obtenidos: Array(0)
+index-CR38cudQ.js:327 📭 [POLLING] No hay trabajos pendientes
+index-CR38cudQ.js:335 APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/stats
+index-CR38cudQ.js:335 APIRequest: Making request to /api/stats with headers: Object
+index-CR38cudQ.js:335 APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/stats
+index-CR38cudQ.js:335 APIRequest: Making request to /api/stats with headers: Object
+index-CR38cudQ.js:327 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+index-CR38cudQ.js:327 🕐 [POLLING] Timestamp: 2025-06-16T04:20:11.521Z
+index-CR38cudQ.js:327 ✅ [POLLING] QZ Tray conectado, continuando...
+index-CR38cudQ.js:327 ✅ [POLLING] API key disponible, haciendo request...
+index-CR38cudQ.js:327 📊 [POLLING] Response status: 200
+index-CR38cudQ.js:327 📋 [POLLING] Trabajos obtenidos: Array(1)
+index-CR38cudQ.js:327 🔥 [POLLING] Encontrados 1 trabajos pendientes
+index-CR38cudQ.js:327 🖨️ [POLLING] Evaluando trabajo 267: SITO
+index-CR38cudQ.js:327 📊 [POLLING] Procesado: false, Procesando: false
+index-CR38cudQ.js:327 🖨️ [POLLING] Procesando trabajo 267: SITO
+index-CR38cudQ.js:327 🖨️ ========== PROCESANDO TRABAJO INMEDIATO 267 ==========
+index-CR38cudQ.js:327 📄 Documento: SITO
+index-CR38cudQ.js:327 🖨️ Impresora: Microsoft Print to PDF
+index-CR38cudQ.js:327 📊 Estado recibido: ready_for_client
+index-CR38cudQ.js:327 🔍 Verificando estado de QZ Tray...
+index-CR38cudQ.js:327 📊 Actualizando trabajo 267 a estado 'processing'...
+index-CR38cudQ.js:327 📊 [UPDATE_STATUS] Actualizando trabajo 267 a estado: processing
+index-CR38cudQ.js:327 ✅ [UPDATE_STATUS] Trabajo 267 actualizado exitosamente: Object
+index-CR38cudQ.js:327 🚀 Trabajo 267 tiene datos QZ preconfigurados - PROCESAMIENTO DIRECTO
+index-CR38cudQ.js:327 📋 Datos QZ a procesar: Object
+index-CR38cudQ.js:327 📤 Enviando trabajo 267 a impresora Microsoft Print to PDF
+index-CR38cudQ.js:327 🔑 Firmando con JSEncrypt y clave privada personalizada
+index-CR38cudQ.js:327 ✅ Firma generada exitosamente
+index-CR38cudQ.js:327 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+index-CR38cudQ.js:327 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+index-CR38cudQ.js:327 📦 [SOCKET-DEBUG] Argumentos: Array(1)
+index-CR38cudQ.js:327 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:20:12.730Z
+index-CR38cudQ.js:327 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+index-CR38cudQ.js:327 👤 [SOCKET-DEBUG] Usuario actual: 2
+index-CR38cudQ.js:327 💓 Heartbeat ACK recibido: 1750047613728
+index-CR38cudQ.js:335 APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/stats
+index-CR38cudQ.js:335 APIRequest: Making request to /api/stats with headers: Object
+index-CR38cudQ.js:327 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+index-CR38cudQ.js:327 🕐 [POLLING] Timestamp: 2025-06-16T04:20:21.527Z
+index-CR38cudQ.js:327 ✅ [POLLING] QZ Tray conectado, continuando...
+index-CR38cudQ.js:327 ✅ [POLLING] API key disponible, haciendo request...
+index-CR38cudQ.js:327 📊 [POLLING] Response status: 200
+index-CR38cudQ.js:327 📋 [POLLING] Trabajos obtenidos: Array(0)
+index-CR38cudQ.js:327 📭 [POLLING] No hay trabajos pendientes
+index-CR38cudQ.js:335 APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/stats
+index-CR38cudQ.js:335 APIRequest: Making request to /api/stats with headers: Object
+index-CR38cudQ.js:327 ✅ Trabajo 267 enviado exitosamente a la impresora
+index-CR38cudQ.js:327 📊 [UPDATE_STATUS] Actualizando trabajo 267 a estado: completed
+index-CR38cudQ.js:327 ✅ [UPDATE_STATUS] Trabajo 267 actualizado exitosamente: Object
+index-CR38cudQ.js:327 🎉 [WEBSOCKET_SUCCESS] Trabajo 267 completado via procesamiento en tiempo real
+index-CR38cudQ.js:327 ✅ Trabajo 267 marcado como completado
+index-CR38cudQ.js:327 🎉 ========== TRABAJO 267 COMPLETADO EXITOSAMENTE ==========
+index-CR38cudQ.js:335 APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/stats
+index-CR38cudQ.js:335 APIRequest: Making request to /api/stats with headers: Object
+index-CR38cudQ.js:327 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+index-CR38cudQ.js:327 🕐 [POLLING] Timestamp: 2025-06-16T04:20:31.186Z
+index-CR38cudQ.js:327 ✅ [POLLING] QZ Tray conectado, continuando...
+index-CR38cudQ.js:327 ✅ [POLLING] API key disponible, haciendo request...
+index-CR38cudQ.js:327 📊 [POLLING] Response status: 200
+index-CR38cudQ.js:327 📋 [POLLING] Trabajos obtenidos: Array(0)
+index-CR38cudQ.js:327 📭 [POLLING] No hay trabajos pendientes
+index-CR38cudQ.js:335 APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/stats
+index-CR38cudQ.js:335 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+index-CR38cudQ.js:335 APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/users
+index-CR38cudQ.js:335 APIRequest: Making request to /api/users with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+index-CR38cudQ.js:335 APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/stats
+index-CR38cudQ.js:335 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+index-CR38cudQ.js:327 🔄 [POLLING] ========== EJECUTANDO POLLING ==========
+index-CR38cudQ.js:327 🕐 [POLLING] Timestamp: 2025-06-16T04:20:41.185Z
+index-CR38cudQ.js:327 ✅ [POLLING] QZ Tray conectado, continuando...
+index-CR38cudQ.js:327 ✅ [POLLING] API key disponible, haciendo request...
+index-CR38cudQ.js:327 📊 [POLLING] Response status: 200
+index-CR38cudQ.js:327 📋 [POLLING] Trabajos obtenidos: []
+index-CR38cudQ.js:327 📭 [POLLING] No hay trabajos pendientes
+index-CR38cudQ.js:327 🔍 [SOCKET-DEBUG] ========== EVENTO RECIBIDO ==========
+index-CR38cudQ.js:327 📣 [SOCKET-DEBUG] Evento: heartbeat-ack
+index-CR38cudQ.js:327 📦 [SOCKET-DEBUG] Argumentos: [{…}]
+index-CR38cudQ.js:327 🕐 [SOCKET-DEBUG] Timestamp: 2025-06-16T04:20:41.838Z
+index-CR38cudQ.js:327 🔌 [SOCKET-DEBUG] Socket ID: wPW_7dLjtjHTXfvEAAAC
+index-CR38cudQ.js:327 👤 [SOCKET-DEBUG] Usuario actual: 2
+index-CR38cudQ.js:327 💓 Heartbeat ACK recibido: 1750047642837
+index-CR38cudQ.js:335 APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/stats
+index-CR38cudQ.js:335 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+index-CR38cudQ.js:335 APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/users
+index-CR38cudQ.js:335 APIRequest: Making request to /api/users with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}
+index-CR38cudQ.js:335 APIRequest: Attempting to get API key, found: Yes
+index-CR38cudQ.js:335 APIRequest: Added Authorization header for /api/stats
+index-CR38cudQ.js:335 APIRequest: Making request to /api/stats with headers: {Content-Type: 'application/json', Authorization: 'Bearer 7b6fbbe0bf718cb12adfbbfad33785b9564d78d71f1d285531fe5e12aec0af59'}

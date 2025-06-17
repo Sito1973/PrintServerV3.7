@@ -1,0 +1,57 @@
+// server/routes.ts - Modificación del endpoint /api/stats
+
+// Agregar esta línea en la importación del websocket
+import { getActiveUsers } from './websocket.js';
+
+// Modificar el endpoint /api/stats existente para incluir la lista de usuarios activos
+app.get("/api/stats", async (req, res) => {
+  try {
+    const user = await validateApiKey(req, res);
+    if (!user) return;
+
+    // Obtener estadísticas existentes
+    const allPrinters = await storage.getAllPrinters();
+    const activePrinters = allPrinters.filter(p => p.status === 'active').length;
+    
+    const allJobs = await storage.getAllPrintJobs();
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const jobsToday = allJobs.filter(job => new Date(job.createdAt) >= today).length;
+    const pendingJobs = allJobs.filter(job => job.status === 'pending').length;
+    const failedJobs = allJobs.filter(job => job.status === 'error').length;
+    
+    const allUsers = await storage.getAllUsers();
+
+    // MODIFICACIÓN: Obtener usuarios activos del WebSocket con detalles
+    const activeUsersFromWS = getActiveUsers(); // Esta función ya existe
+    const activeUsersCount = activeUsersFromWS.length;
+
+    // NUEVO: Crear lista de usernames/IDs de usuarios activos para el frontend
+    const activeUsersList = activeUsersFromWS.map(activeUser => ({
+      userId: activeUser.userId,
+      username: activeUser.username,
+      joinTime: activeUser.joinTime,
+      lastActivity: activeUser.lastActivity
+    }));
+
+    console.log(`📊 [STATS] Estadísticas solicitadas por ${user.username}`);
+    console.log(`📊 [STATS] Usuarios activos (WebSocket): ${activeUsersCount}`);
+    console.log(`📊 [STATS] Lista usuarios activos: [${activeUsersList.map(u => u.username).join(', ')}]`);
+
+    res.json({
+      activePrinters,
+      jobsToday,
+      pendingJobs,
+      failedJobs,
+      activeUsers: activeUsersCount,
+      totalPrinters: allPrinters.length,
+      totalUsers: allUsers.length,
+      totalJobs: allJobs.length,
+      // NUEVO: Lista detallada de usuarios activos
+      activeUsersList: activeUsersList
+    });
+  } catch (error) {
+    console.error("❌ [STATS] Error calculando estadísticas:", error);
+    res.status(500).json({ error: "Error fetching statistics" });
+  }
+});
