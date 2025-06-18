@@ -2,7 +2,37 @@ import { pgTable, text, serial, integer, boolean, timestamp } from "drizzle-orm/
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-// Users table
+// Companies table - NUEVA TABLA
+export const companies = pgTable("companies", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull().unique(),
+  isActive: boolean("is_active").default(true),
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
+
+export const insertCompanySchema = createInsertSchema(companies).pick({
+  name: true,
+  isActive: true,
+});
+
+// Locations table - NUEVA TABLA
+export const locations = pgTable("locations", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  companyId: integer("company_id").references(() => companies.id, { onDelete: 'cascade' }),
+  isActive: boolean("is_active").default(true),
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
+
+export const insertLocationSchema = createInsertSchema(locations).pick({
+  name: true,
+  companyId: true,
+  isActive: true,
+});
+
+// Users table - ACTUALIZADA con nuevas columnas
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
   username: text("username").notNull().unique(),
@@ -11,8 +41,12 @@ export const users = pgTable("users", {
   email: text("email").notNull(),
   apiKey: text("api_key").notNull().unique(),
   isAdmin: boolean("is_admin").default(false),
-  location: text("location"), // Empresa
-  floor: text("floor"), // Sede
+  // Campos existentes (mantener por compatibilidad)
+  location: text("location"), // Empresa (string legacy)
+  floor: text("floor"), // Sede (string legacy)
+  // NUEVAS COLUMNAS con referencias a las tablas
+  companyId: integer("company_id").references(() => companies.id),
+  locationId: integer("location_id").references(() => locations.id),
 });
 
 export const insertUserSchema = createInsertSchema(users).pick({
@@ -23,19 +57,25 @@ export const insertUserSchema = createInsertSchema(users).pick({
   isAdmin: true,
   location: true,
   floor: true,
+  companyId: true,
+  locationId: true,
 });
 
-// Printers table
+// Printers table - ACTUALIZADA con nuevas columnas
 export const printers = pgTable("printers", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
-  location: text("location"),
   model: text("model"),
   status: text("status").default("offline"),
   lastPrintTime: timestamp("last_print_time"),
-  floor: text("floor"),
   uniqueId: text("unique_id").notNull().unique(),
   isActive: boolean("is_active").default(true),
+  // Campos existentes (mantener por compatibilidad)
+  location: text("location"), // Empresa (string legacy)
+  floor: text("floor"), // Sede (string legacy)
+  // NUEVAS COLUMNAS con referencias a las tablas
+  companyId: integer("company_id").references(() => companies.id),
+  locationId: integer("location_id").references(() => locations.id),
 });
 
 export const insertPrinterSchema = createInsertSchema(printers).pick({
@@ -46,9 +86,11 @@ export const insertPrinterSchema = createInsertSchema(printers).pick({
   floor: true,
   uniqueId: true,
   isActive: true,
+  companyId: true,
+  locationId: true,
 });
 
-// Print Jobs table
+// Print Jobs table - SIN CAMBIOS
 export const printJobs = pgTable("print_jobs", {
   id: serial("id").primaryKey(),
   documentUrl: text("document_url").notNull(),
@@ -74,12 +116,12 @@ export const insertPrintJobSchema = createInsertSchema(printJobs).pick({
   orientation: true,
 });
 
-// API Key validation schema
+// API Key validation schema - SIN CAMBIOS
 export const apiKeyHeaderSchema = z.object({
   authorization: z.string().regex(/^Bearer\s.+$/i),
 });
 
-// Print job request schema
+// Print job request schema - SIN CAMBIOS
 export const printJobRequestSchema = z.object({
   printerId: z.string(),
   documentUrl: z.string().url(),
@@ -90,13 +132,13 @@ export const printJobRequestSchema = z.object({
   }).default({}),
 });
 
-// Simplified print job request schema for API (string printer ID)
+// Simplified print job request schema for API (string printer ID) - SIN CAMBIOS
 export const simplePrintJobRequestSchema = z.object({
   printerId: z.string(),
   documentUrl: z.string().url(),
 });
 
-// Print job request schema for numeric printer ID
+// Print job request schema for numeric printer ID - SIN CAMBIOS
 export const numericPrinterJobRequestSchema = z.object({
   printerId: z.number().int().positive(),
   documentUrl: z.string().url(),
@@ -112,7 +154,7 @@ export const numericPrinterJobRequestSchema = z.object({
   }).optional()
 });
 
-// Types
+// Types - Existentes
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 
@@ -122,6 +164,29 @@ export type Printer = typeof printers.$inferSelect;
 export type InsertPrintJob = z.infer<typeof insertPrintJobSchema>;
 export type PrintJob = typeof printJobs.$inferSelect;
 
+// Types - NUEVOS para companies y locations
+export type InsertCompany = z.infer<typeof insertCompanySchema>;
+export type Company = typeof companies.$inferSelect;
+
+export type InsertLocation = z.infer<typeof insertLocationSchema>;
+export type Location = typeof locations.$inferSelect;
+
+// Types para respuestas con relaciones - NUEVOS
+export type CompanyWithLocations = Company & {
+  locations: Location[];
+};
+
+export type UserWithCompanyLocation = User & {
+  company?: Company;
+  location?: Location;
+};
+
+export type PrinterWithCompanyLocation = Printer & {
+  company?: Company;
+  location?: Location;
+};
+
+// Types existentes
 export type PrintJobRequest = z.infer<typeof printJobRequestSchema>;
 export type SimplePrintJobRequest = z.infer<typeof simplePrintJobRequestSchema>;
 export type NumericPrinterJobRequest = z.infer<typeof numericPrinterJobRequestSchema>;

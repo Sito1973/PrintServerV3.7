@@ -7,7 +7,8 @@ import {
   simplePrintJobRequestSchema,
   numericPrinterJobRequestSchema,
   insertUserSchema, 
-  insertPrinterSchema
+  insertPrinterSchema,
+  companies, locations 
 } from "@shared/schema";
 import { ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
@@ -1470,6 +1471,513 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     }
   });
+
+  // GET /api/companies - Listar todas las empresas con sus sedes
+  app.get("/api/companies", async (req, res) => {
+    try {
+      const user = await validateApiKey(req, res);
+      if (!user) return;
+
+      console.log(`📋 [COMPANIES] Usuario ${user.username} solicitando lista de empresas`);
+
+      // Obtener todas las empresas activas
+      const companiesData = await db
+        .select()
+        .from(companies)
+        .where(eq(companies.isActive, true))
+        .orderBy(companies.name);
+
+      // Obtener todas las sedes activas
+      const locationsData = await db
+        .select()
+        .from(locations)
+        .where(eq(locations.isActive, true))
+        .orderBy(locations.name);
+
+      // Combinar empresas con sus sedes
+      const companiesWithLocations = companiesData.map(company => ({
+        ...company,
+        locations: locationsData.filter(location => location.companyId === company.id)
+      }));
+
+      console.log(`✅ [COMPANIES] Devolviendo ${companiesWithLocations.length} empresas`);
+      res.json(companiesWithLocations);
+    } catch (error) {
+      console.error('❌ [COMPANIES] Error fetching companies:', error);
+      res.status(500).json({ 
+        error: 'Error al obtener empresas',
+        details: error instanceof Error ? error.message : 'Error desconocido'
+      });
+    }
+  });
+
+  // GET /api/companies/:id - Obtener una empresa específica
+  app.get("/api/companies/:id", async (req, res) => {
+    try {
+      const user = await validateApiKey(req, res);
+      if (!user) return;
+
+      const { id } = req.params;
+      const companyId = parseInt(id);
+
+      if (isNaN(companyId)) {
+        return res.status(400).json({ error: 'ID de empresa inválido' });
+      }
+
+      console.log(`📋 [COMPANIES] Obteniendo empresa ${companyId}`);
+
+      // Obtener empresa
+      const [company] = await db
+        .select()
+        .from(companies)
+        .where(and(eq(companies.id, companyId), eq(companies.isActive, true)));
+
+      if (!company) {
+        return res.status(404).json({ error: 'Empresa no encontrada' });
+      }
+
+      // Obtener sedes de la empresa
+      const companyLocations = await db
+        .select()
+        .from(locations)
+        .where(and(eq(locations.companyId, companyId), eq(locations.isActive, true)))
+        .orderBy(locations.name);
+
+      const companyWithLocations = {
+        ...company,
+        locations: companyLocations
+      };
+
+      res.json(companyWithLocations);
+    } catch (error) {
+      console.error('❌ [COMPANIES] Error fetching company:', error);
+      res.status(500).json({ 
+        error: 'Error al obtener empresa',
+        details: error instanceof Error ? error.message : 'Error desconocido'
+      });
+    }
+  });
+
+  // POST /api/companies - Crear nueva empresa
+  app.post("/api/companies", async (req, res) => {
+    try {
+      const user = await validateApiKey(req, res);
+      if (!user) return;
+
+      const { name } = req.body;
+
+      if (!name || typeof name !== 'string' || name.trim().length === 0) {
+        return res.status(400).json({ error: 'El nombre de la empresa es requerido' });
+      }
+
+      const trimmedName = name.trim();
+
+      console.log(`➕ [COMPANIES] Usuario ${user.username} creando empresa: ${trimmedName}`);
+
+      // Verificar si ya existe una empresa con ese nombre
+      const existingCompany = await db
+        .select()
+        .from(companies)
+        .where(eq(companies.name, trimmedName))
+        .limit(1);
+
+      if (existingCompany.length > 0) {
+        return res.status(409).json({ error: 'Ya existe una empresa con ese nombre' });
+      }
+
+      // Crear nueva empresa
+      const [newCompany] = await db
+        .insert(companies)
+        .values({ 
+          name: trimmedName,
+          isActive: true,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        })
+        .returning();
+
+      const companyWithLocations = {
+        ...newCompany,
+        locations: []
+      };
+
+      console.log(`✅ [COMPANIES] Empresa creada con ID: ${newCompany.id}`);
+      res.status(201).json(companyWithLocations);
+    } catch (error) {
+      console.error('❌ [COMPANIES] Error creating company:', error);
+      if (error instanceof Error && error.message.includes('unique constraint')) {
+        res.status(409).json({ error: 'Ya existe una empresa con ese nombre' });
+      } else {
+        res.status(500).json({ 
+          error: 'Error al crear empresa',
+          details: error instanceof Error ? error.message : 'Error desconocido'
+        });
+      }
+    }
+  });
+
+  // PUT /api/companies/:id - Actualizar empresa
+  app.put("/api/companies/:id", async (req, res) => {
+    try {
+      const user = await validateApiKey(req, res);
+      if (!user) return;
+
+      const { id } = req.params;
+      const { name } = req.body;
+      const companyId = parseInt(id);
+
+      if (isNaN(companyId)) {
+        return res.status(400).json({ error: 'ID de empresa inválido' });
+      }
+
+      if (!name || typeof name !== 'string' || name.trim().length === 0) {
+        return res.status(400).json({ error: 'El nombre de la empresa es requerido' });
+      }
+
+      const trimmedName = name.trim();
+
+      console.log(`✏️ [COMPANIES] Actualizando empresa ${companyId}: ${trimmedName}`);
+
+      // Verificar que la empresa existe
+      const [existingCompany] = await db
+        .select()
+        .from(companies)
+        .where(and(eq(companies.id, companyId), eq(companies.isActive, true)));
+
+      if (!existingCompany) {
+        return res.status(404).json({ error: 'Empresa no encontrada' });
+      }
+
+      // Actualizar empresa
+      const [updatedCompany] = await db
+        .update(companies)
+        .set({ 
+          name: trimmedName, 
+          updatedAt: new Date() 
+        })
+        .where(eq(companies.id, companyId))
+        .returning();
+
+      // Obtener sedes actualizadas
+      const companyLocations = await db
+        .select()
+        .from(locations)
+        .where(and(eq(locations.companyId, companyId), eq(locations.isActive, true)))
+        .orderBy(locations.name);
+
+      const companyWithLocations = {
+        ...updatedCompany,
+        locations: companyLocations
+      };
+
+      console.log(`✅ [COMPANIES] Empresa ${companyId} actualizada`);
+      res.json(companyWithLocations);
+    } catch (error) {
+      console.error('❌ [COMPANIES] Error updating company:', error);
+      res.status(500).json({ 
+        error: 'Error al actualizar empresa',
+        details: error instanceof Error ? error.message : 'Error desconocido'
+      });
+    }
+  });
+
+  // DELETE /api/companies/:id - Eliminar empresa (soft delete)
+  app.delete("/api/companies/:id", async (req, res) => {
+    try {
+      const user = await validateApiKey(req, res);
+      if (!user) return;
+
+      const { id } = req.params;
+      const companyId = parseInt(id);
+
+      if (isNaN(companyId)) {
+        return res.status(400).json({ error: 'ID de empresa inválido' });
+      }
+
+      console.log(`🗑️ [COMPANIES] Eliminando empresa ${companyId}`);
+
+      // Verificar que la empresa existe
+      const [existingCompany] = await db
+        .select()
+        .from(companies)
+        .where(and(eq(companies.id, companyId), eq(companies.isActive, true)));
+
+      if (!existingCompany) {
+        return res.status(404).json({ error: 'Empresa no encontrada' });
+      }
+
+      // Realizar soft delete de la empresa y sus sedes
+      await db.transaction(async (tx) => {
+        // Desactivar todas las sedes de la empresa
+        await tx
+          .update(locations)
+          .set({ isActive: false, updatedAt: new Date() })
+          .where(eq(locations.companyId, companyId));
+
+        // Desactivar la empresa
+        await tx
+          .update(companies)
+          .set({ isActive: false, updatedAt: new Date() })
+          .where(eq(companies.id, companyId));
+      });
+
+      console.log(`✅ [COMPANIES] Empresa ${companyId} eliminada (soft delete)`);
+      res.json({ 
+        message: 'Empresa eliminada exitosamente',
+        companyName: existingCompany.name
+      });
+    } catch (error) {
+      console.error('❌ [COMPANIES] Error deleting company:', error);
+      res.status(500).json({ 
+        error: 'Error al eliminar empresa',
+        details: error instanceof Error ? error.message : 'Error desconocido'
+      });
+    }
+  });
+
+  // ================================
+  // LOCATIONS ROUTES
+  // ================================
+
+  // GET /api/locations - Listar todas las sedes
+  app.get("/api/locations", async (req, res) => {
+    try {
+      const user = await validateApiKey(req, res);
+      if (!user) return;
+
+      const { companyId } = req.query;
+
+      console.log(`📍 [LOCATIONS] Usuario ${user.username} solicitando sedes`);
+
+      let query = db
+        .select({
+          id: locations.id,
+          name: locations.name,
+          companyId: locations.companyId,
+          isActive: locations.isActive,
+          createdAt: locations.createdAt,
+          updatedAt: locations.updatedAt,
+          companyName: companies.name
+        })
+        .from(locations)
+        .leftJoin(companies, eq(locations.companyId, companies.id))
+        .where(eq(locations.isActive, true));
+
+      // Filtrar por empresa si se proporciona
+      if (companyId) {
+        const companyIdNum = parseInt(companyId as string);
+        if (!isNaN(companyIdNum)) {
+          query = query.where(and(
+            eq(locations.isActive, true),
+            eq(locations.companyId, companyIdNum)
+          ));
+        }
+      }
+
+      const locationsData = await query.orderBy(companies.name, locations.name);
+
+      console.log(`✅ [LOCATIONS] Devolviendo ${locationsData.length} sedes`);
+      res.json(locationsData);
+    } catch (error) {
+      console.error('❌ [LOCATIONS] Error fetching locations:', error);
+      res.status(500).json({ 
+        error: 'Error al obtener sedes',
+        details: error instanceof Error ? error.message : 'Error desconocido'
+      });
+    }
+  });
+
+  // POST /api/locations - Crear nueva sede
+  app.post("/api/locations", async (req, res) => {
+    try {
+      const user = await validateApiKey(req, res);
+      if (!user) return;
+
+      const { name, companyId } = req.body;
+
+      if (!name || typeof name !== 'string' || name.trim().length === 0) {
+        return res.status(400).json({ error: 'El nombre de la sede es requerido' });
+      }
+
+      if (!companyId || isNaN(parseInt(companyId))) {
+        return res.status(400).json({ error: 'ID de empresa válido es requerido' });
+      }
+
+      const trimmedName = name.trim();
+      const companyIdNum = parseInt(companyId);
+
+      console.log(`➕ [LOCATIONS] Creando sede: ${trimmedName} en empresa ${companyIdNum}`);
+
+      // Verificar que la empresa existe y está activa
+      const [company] = await db
+        .select()
+        .from(companies)
+        .where(and(eq(companies.id, companyIdNum), eq(companies.isActive, true)));
+
+      if (!company) {
+        return res.status(404).json({ error: 'Empresa no encontrada o inactiva' });
+      }
+
+      // Verificar que no existe una sede con el mismo nombre en esa empresa
+      const existingLocation = await db
+        .select()
+        .from(locations)
+        .where(and(
+          eq(locations.name, trimmedName),
+          eq(locations.companyId, companyIdNum),
+          eq(locations.isActive, true)
+        ))
+        .limit(1);
+
+      if (existingLocation.length > 0) {
+        return res.status(409).json({ 
+          error: 'Ya existe una sede con ese nombre en esta empresa' 
+        });
+      }
+
+      // Crear nueva sede
+      const [newLocation] = await db
+        .insert(locations)
+        .values({ 
+          name: trimmedName,
+          companyId: companyIdNum,
+          isActive: true,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        })
+        .returning();
+
+      const locationWithCompany = {
+        ...newLocation,
+        companyName: company.name
+      };
+
+      console.log(`✅ [LOCATIONS] Sede creada con ID: ${newLocation.id}`);
+      res.status(201).json(locationWithCompany);
+    } catch (error) {
+      console.error('❌ [LOCATIONS] Error creating location:', error);
+      res.status(500).json({ 
+        error: 'Error al crear sede',
+        details: error instanceof Error ? error.message : 'Error desconocido'
+      });
+    }
+  });
+
+  // PUT /api/locations/:id - Actualizar sede
+  app.put("/api/locations/:id", async (req, res) => {
+    try {
+      const user = await validateApiKey(req, res);
+      if (!user) return;
+
+      const { id } = req.params;
+      const { name } = req.body;
+      const locationId = parseInt(id);
+
+      if (isNaN(locationId)) {
+        return res.status(400).json({ error: 'ID de sede inválido' });
+      }
+
+      if (!name || typeof name !== 'string' || name.trim().length === 0) {
+        return res.status(400).json({ error: 'El nombre de la sede es requerido' });
+      }
+
+      const trimmedName = name.trim();
+
+      console.log(`✏️ [LOCATIONS] Actualizando sede ${locationId}: ${trimmedName}`);
+
+      // Verificar que la sede existe
+      const [existingLocation] = await db
+        .select()
+        .from(locations)
+        .where(and(eq(locations.id, locationId), eq(locations.isActive, true)));
+
+      if (!existingLocation) {
+        return res.status(404).json({ error: 'Sede no encontrada' });
+      }
+
+      // Actualizar sede
+      const [updatedLocation] = await db
+        .update(locations)
+        .set({ 
+          name: trimmedName,
+          updatedAt: new Date() 
+        })
+        .where(eq(locations.id, locationId))
+        .returning();
+
+      // Obtener información de la empresa
+      const [company] = await db
+        .select()
+        .from(companies)
+        .where(eq(companies.id, existingLocation.companyId));
+
+      const locationWithCompany = {
+        ...updatedLocation,
+        companyName: company?.name || ''
+      };
+
+      console.log(`✅ [LOCATIONS] Sede ${locationId} actualizada`);
+      res.json(locationWithCompany);
+    } catch (error) {
+      console.error('❌ [LOCATIONS] Error updating location:', error);
+      res.status(500).json({ 
+        error: 'Error al actualizar sede',
+        details: error instanceof Error ? error.message : 'Error desconocido'
+      });
+    }
+  });
+
+  // DELETE /api/locations/:id - Eliminar sede (soft delete)
+  app.delete("/api/locations/:id", async (req, res) => {
+    try {
+      const user = await validateApiKey(req, res);
+      if (!user) return;
+
+      const { id } = req.params;
+      const locationId = parseInt(id);
+
+      if (isNaN(locationId)) {
+        return res.status(400).json({ error: 'ID de sede inválido' });
+      }
+
+      console.log(`🗑️ [LOCATIONS] Eliminando sede ${locationId}`);
+
+      // Verificar que la sede existe
+      const [existingLocation] = await db
+        .select({
+          id: locations.id,
+          name: locations.name,
+          companyName: companies.name
+        })
+        .from(locations)
+        .leftJoin(companies, eq(locations.companyId, companies.id))
+        .where(and(eq(locations.id, locationId), eq(locations.isActive, true)));
+
+      if (!existingLocation) {
+        return res.status(404).json({ error: 'Sede no encontrada' });
+      }
+
+      // Realizar soft delete
+      await db
+        .update(locations)
+        .set({ isActive: false, updatedAt: new Date() })
+        .where(eq(locations.id, locationId));
+
+      console.log(`✅ [LOCATIONS] Sede ${locationId} eliminada (soft delete)`);
+      res.json({ 
+        message: 'Sede eliminada exitosamente',
+        locationName: existingLocation.name,
+        companyName: existingLocation.companyName
+      });
+    } catch (error) {
+      console.error('❌ [LOCATIONS] Error deleting location:', error);
+      res.status(500).json({ 
+        error: 'Error al eliminar sede',
+        details: error instanceof Error ? error.message : 'Error desconocido'
+      });
+    }
+  });
+
 
   return httpServer;
 }
