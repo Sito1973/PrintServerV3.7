@@ -1,98 +1,79 @@
-// client/src/components/users/UserList.tsx - CORRECCIÓN DE MUTATIONS
+// client/src/components/users/UserList.tsx
+import React, { useState, useEffect } from 'react';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { User } from '@shared/types';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
+import CompanyLocationSelector from '@/components/ui/CompanyLocationSelector';
+import { useLocationNames } from '@/hooks/useLocationNames';
+import { useToast } from '@/hooks/use-toast';
+import { apiRequest } from '@/lib/queryClient';
+import { 
+  Search, 
+  Edit, 
+  Trash2, 
+  Building2, 
+  MapPin,
+  Circle, // Para el indicador de estado
+  Wifi,   // Para el icono de conectado
+  WifiOff, // Para el icono de desconectado
+  Copy
+} from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
-import React, { useState, useEffect } from "react";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient"; // ← CORRECCIÓN: Import correcto
-import CompanyLocationSelector from "@/components/ui/CompanyLocationSelector";
-import { useAppSettings } from "@/components/AppContext";
-import { Building2, MapPin, Search, Copy, Edit, Trash2 } from "lucide-react";
-
-// Interfaces necesarias
-interface User {
-  id: number;
-  username: string;
-  name: string;
-  email: string;
-  apiKey: string;
-  isAdmin: boolean;
+interface UserEditForm {
+  username?: string;
+  name?: string;
+  email?: string;
+  isAdmin?: boolean;
   location?: string;
   floor?: string;
-}
-
-interface UserEditForm extends Partial<User> {
-  password?: string;
-  regenerateApiKey?: boolean;
   locationName?: string;
   floorName?: string;
+  regenerateApiKey?: boolean;
 }
 
-// Función auxiliar para encontrar nombres por IDs
-const useLocationNames = () => {
-  const { getAllEmpresas } = useAppSettings();
+interface ActiveUser {
+  userId: string;
+  username: string;
+  joinTime: string;
+  lastActivity: string;
+  duration: number;
+}
 
-  const getLocationNames = (locationId: string, floorId: string) => {
-    const empresas = getAllEmpresas();
-    const empresa = empresas.find(e => e.id === locationId);
-    const sede = empresa?.sedes.find(s => s.id === floorId);
+interface StatsResponse {
+  activePrinters: number;
+  jobsToday: number;
+  pendingJobs: number;
+  failedJobs: number;
+  activeUsers: number;
+  totalPrinters: number;
+  totalUsers: number;
+  totalJobs: number;
+  activeUsersList: ActiveUser[];
+}
 
-    return {
-      empresaName: empresa?.name || '',
-      sedeName: sede?.name || ''
-    };
-  };
-
-  return { getLocationNames };
-};
-
-// Componente para mostrar empresa y sede
-const UserLocationDisplay: React.FC<{ user: User }> = ({ user }) => {
-  const { getAllEmpresas } = useAppSettings();
+// Componente para mostrar ubicación con iconos
+const LocationDisplay: React.FC<{ user: User }> = ({ user }) => {
+  const { getLocationNames } = useLocationNames();
 
   const getLocationDisplay = () => {
-    if (!user.location && !user.floor) {
-      return (
-        <div className="text-gray-500 italic">
-          Sin asignar
-        </div>
-      );
-    }
+    // Obtener nombres actuales de ubicación
+    const { empresaName, sedeName } = getLocationNames(user.location || '', user.floor || '');
 
-    const empresas = getAllEmpresas();
-    const empresa = empresas.find(e => e.id === user.location);
-    const sede = empresa?.sedes.find(s => s.id === user.floor);
-
-    if (empresa && sede) {
+    if (empresaName && sedeName) {
       return (
         <div className="space-y-1">
           <div className="flex items-center gap-1 text-sm">
             <Building2 className="h-3 w-3 text-blue-600" />
-            <span className="font-medium">{empresa.name}</span>
+            <span className="font-medium">{empresaName}</span>
           </div>
           <div className="flex items-center gap-1 text-xs text-gray-600">
             <MapPin className="h-3 w-3 text-green-600" />
-            <span>{sede.name}</span>
+            <span>{sedeName}</span>
           </div>
         </div>
       );
@@ -117,6 +98,46 @@ const UserLocationDisplay: React.FC<{ user: User }> = ({ user }) => {
   return getLocationDisplay();
 };
 
+// Componente para mostrar el estado de conexión
+const OnlineIndicator: React.FC<{ user: User; activeUsers: ActiveUser[] }> = ({ user, activeUsers }) => {
+  const isOnline = activeUsers.some(activeUser => activeUser.userId === user.id.toString());
+  const activeUserData = activeUsers.find(activeUser => activeUser.userId === user.id.toString());
+
+  if (isOnline && activeUserData) {
+    const duration = Math.floor(activeUserData.duration / 60); // convertir a minutos
+    return (
+      <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
+          <Circle className="h-3 w-3 fill-green-500 text-green-500 animate-pulse" />
+          <Wifi className="h-4 w-4 text-green-600" />
+        </div>
+        <div className="text-xs">
+          <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-300">
+            En línea
+          </Badge>
+          <div className="text-gray-500 mt-1">
+            {duration > 0 ? `${duration}m conectado` : 'Recién conectado'}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1">
+        <Circle className="h-3 w-3 fill-gray-400 text-gray-400" />
+        <WifiOff className="h-4 w-4 text-gray-400" />
+      </div>
+      <div className="text-xs">
+        <Badge variant="secondary" className="bg-gray-100 text-gray-600 border-gray-300">
+          Desconectado
+        </Badge>
+      </div>
+    </div>
+  );
+};
+
 const UserList: React.FC = () => {
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -125,6 +146,7 @@ const UserList: React.FC = () => {
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [showEditDialog, setShowEditDialog] = useState(false);
   const [editFormData, setEditFormData] = useState<UserEditForm>({});
+  const [activeUsers, setActiveUsers] = useState<ActiveUser[]>([]);
 
   // Estados para el selector de empresa y sede en edición
   const [editSelectedEmpresa, setEditSelectedEmpresa] = useState('');
@@ -140,7 +162,22 @@ const UserList: React.FC = () => {
     refetchInterval: 10000,
   });
 
-  // ✅ CORRECCIÓN: Agregar updateMutation que faltaba
+  // Query para obtener estadísticas de usuarios activos
+  const { data: stats } = useQuery<StatsResponse>({
+    queryKey: ['/api/stats'],
+    queryFn: () => apiRequest({ url: '/api/stats' }),
+    refetchInterval: 5000, // Actualizar cada 5 segundos
+    staleTime: 2000,
+  });
+
+  // Actualizar lista de usuarios activos cuando cambian las estadísticas
+  useEffect(() => {
+    if (stats?.activeUsersList) {
+      setActiveUsers(stats.activeUsersList);
+    }
+  }, [stats]);
+
+  // Mutation para actualizar usuario
   const updateMutation = useMutation({
     mutationFn: async (data: {id: number, userData: Partial<User>}) => {
       await apiRequest({
@@ -166,7 +203,7 @@ const UserList: React.FC = () => {
     },
   });
 
-  // ✅ CORRECCIÓN: Agregar deleteMutation que también puede faltar
+  // Mutation para eliminar usuario
   const deleteMutation = useMutation({
     mutationFn: async (id: number) => {
       await apiRequest({
@@ -258,6 +295,30 @@ const UserList: React.FC = () => {
     setEditSelectedSede('');
   };
 
+  // Función para manejar la actualización del usuario
+  const handleUpdateUser = () => {
+    if (!selectedUser) return;
+
+    const updateData: Partial<User> = {
+      username: editFormData.username,
+      name: editFormData.name,
+      email: editFormData.email,
+      isAdmin: editFormData.isAdmin,
+      location: editFormData.location,
+      floor: editFormData.floor,
+    };
+
+    // Agregar regenerateApiKey si está marcado
+    if (editFormData.regenerateApiKey) {
+      (updateData as any).regenerateApiKey = true;
+    }
+
+    updateMutation.mutate({
+      id: selectedUser.id,
+      userData: updateData
+    });
+  };
+
   if (isLoading) {
     return <div>Cargando usuarios...</div>;
   }
@@ -268,6 +329,38 @@ const UserList: React.FC = () => {
 
   return (
     <div className="flex flex-col">
+      {/* Header con estadísticas de usuarios activos */}
+      <div className="mb-4 p-4 bg-gradient-to-r from-blue-50 to-green-50 rounded-lg border">
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800">Lista de Usuarios</h3>
+            <p className="text-sm text-gray-600">
+              {usersArray.length} usuarios totales
+            </p>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="text-center">
+              <div className="flex items-center gap-2">
+                <Circle className="h-3 w-3 fill-green-500 text-green-500 animate-pulse" />
+                <span className="text-lg font-bold text-green-600">
+                  {activeUsers.length}
+                </span>
+              </div>
+              <div className="text-xs text-gray-600">En línea ahora</div>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center gap-2">
+                <Circle className="h-3 w-3 fill-gray-400 text-gray-400" />
+                <span className="text-lg font-bold text-gray-600">
+                  {usersArray.length - activeUsers.length}
+                </span>
+              </div>
+              <div className="text-xs text-gray-600">Desconectados</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Search */}
       <div className="mt-4 mb-6 flex">
         <div className="flex-1 min-w-0">
@@ -296,6 +389,9 @@ const UserList: React.FC = () => {
           <thead className="bg-gray-50">
             <tr>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Estado
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Usuario
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -318,47 +414,55 @@ const UserList: React.FC = () => {
           <tbody className="bg-white divide-y divide-gray-200">
             {filteredUsers.length === 0 ? (
               <tr>
-                <td colSpan={6} className="px-6 py-4 whitespace-nowrap text-center text-gray-500">
+                <td colSpan={7} className="px-6 py-4 whitespace-nowrap text-center text-gray-500">
                   {searchTerm ? 'No se encontraron usuarios que coincidan con la búsqueda.' : 'No se encontraron usuarios.'}
                 </td>
               </tr>
             ) : (
               filteredUsers.map((user) => (
                 <tr key={user.id} className="hover:bg-gray-50">
+                  {/* Columna de Estado - NUEVA */}
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <OnlineIndicator user={user} activeUsers={activeUsers} />
+                  </td>
+
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
-                      <div className="ml-4">
-                        <div className="text-sm font-medium text-gray-900">
-                          {user.name}
-                        </div>
-                        <div className="text-sm text-gray-500">
-                          @{user.username}
-                        </div>
+                      <div className="text-sm font-medium text-gray-900">
+                        {user.name}
+                      </div>
+                      <div className="text-sm text-gray-500 ml-2">
+                        @{user.username}
                       </div>
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">{user.email}</div>
+
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    {user.email}
                   </td>
+
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <UserLocationDisplay user={user} />
+                    <LocationDisplay user={user} />
                   </td>
+
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                    <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
                       user.isAdmin 
-                        ? 'bg-purple-100 text-purple-800'
-                        : 'bg-green-100 text-green-800'
+                        ? 'bg-purple-100 text-purple-800' 
+                        : 'bg-gray-100 text-gray-800'
                     }`}>
                       {user.isAdmin ? 'Administrador' : 'Usuario'}
                     </span>
                   </td>
+
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center text-sm text-gray-900 font-mono">
-                      <span>{user.apiKey.substring(0, 8)}...</span>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-sm text-gray-500 font-mono">
+                        {user.apiKey.substring(0, 20)}...
+                      </span>
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="ml-2 h-4 w-4 p-0"
                         onClick={() => {
                           navigator.clipboard.writeText(user.apiKey);
                           toast({
@@ -371,6 +475,7 @@ const UserList: React.FC = () => {
                       </Button>
                     </div>
                   </td>
+
                   <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium space-x-2">
                     <Button
                       variant="ghost"
@@ -484,30 +589,19 @@ const UserList: React.FC = () => {
               )}
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="edit-password">Contraseña (dejar vacío para no cambiar)</Label>
-              <Input 
-                id="edit-password" 
-                type="password" 
-                value={editFormData.password || ''} 
-                onChange={(e) => setEditFormData({...editFormData, password: e.target.value})}
-                placeholder="••••••••"
-              />
-            </div>
-
             <div className="flex items-center space-x-2">
-              <Input 
+              <input 
                 type="checkbox" 
                 id="edit-admin" 
                 className="w-4 h-4" 
                 checked={editFormData.isAdmin || false} 
                 onChange={(e) => setEditFormData({...editFormData, isAdmin: e.target.checked})}
               />
-              <Label htmlFor="edit-admin">Acceso de administrador</Label>
+              <Label htmlFor="edit-admin">Administrador</Label>
             </div>
 
             <div className="flex items-center space-x-2">
-              <Input 
+              <input 
                 type="checkbox" 
                 id="edit-regenerate-key" 
                 className="w-4 h-4" 
@@ -519,31 +613,11 @@ const UserList: React.FC = () => {
           </div>
 
           <DialogFooter>
-            <Button
-              variant="outline"
-              onClick={closeEditDialog}
-            >
+            <Button variant="outline" onClick={closeEditDialog}>
               Cancelar
             </Button>
-            <Button
-              onClick={() => {
-                // Validar que se haya seleccionado empresa y sede
-                if (!editSelectedEmpresa || !editSelectedSede) {
-                  toast({
-                    title: "Selección incompleta",
-                    description: "Debe seleccionar tanto la empresa como la sede",
-                    variant: "destructive",
-                  });
-                  return;
-                }
-
-                if (selectedUser) {
-                  updateMutation.mutate({
-                    id: selectedUser.id, 
-                    userData: editFormData
-                  });
-                }
-              }}
+            <Button 
+              onClick={handleUpdateUser}
               disabled={updateMutation.isPending || !editSelectedEmpresa || !editSelectedSede}
             >
               {updateMutation.isPending ? "Guardando..." : "Guardar Cambios"}
